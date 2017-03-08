@@ -14,13 +14,18 @@
 <script type="text/javascript">
 
 (function() {
-
-  var btn = document.querySelector("#button");
-  var inp = document.querySelector("#aqi-input");
-  var span = document.querySelector("#aqi-display");
-  btn.addEventListener("click",function(){
-        span.innerHTML = inp.value;
-  })
+    //获取dom元素
+    var btn = document.querySelector("#button");
+    var inp = document.querySelector("#aqi-input");
+    var span = document.querySelector("#aqi-display");
+    // 绑定点击事件，得到输入框的内容到span中
+    btn.addEventListener("click",function(){
+        if(inp.value == ""){
+            alert("输入不能为空")
+        }else{
+            span.innerHTML = inp.value;
+        }
+    })
 
 })();
 
